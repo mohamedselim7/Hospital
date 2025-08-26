@@ -119,12 +119,13 @@
                         @endguest
                     <a href="/About" class="nav-item nav-link active">من نحن</a>
                     <a href="/contact" class="nav-item nav-link">تواصل معنا </a>
+                    <a href="/AddDoc" class="nav-item nav-link"> اضافة طبيب </a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">الصفحات</a>
                         <div class="dropdown-menu m-0">
                             <a href="/Price" class="dropdown-item">خطة الأسعار</a>
-                            <a href="team.html" class="dropdown-item">Our Dentist</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="/TeamOfDoctors" class="dropdown-item">هيئة الأطباء</a>
+                            <a href="/CustomerOpinion" class="dropdown-item">أراء العملاء</a>
                             <a href="/appointment" class="dropdown-item">احجز الأن</a>
                         </div>
                     </div>

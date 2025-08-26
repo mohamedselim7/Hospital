@@ -5,11 +5,18 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Patient;
 use App\Models\Appointment;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\session;
 class FirstController extends Controller
 {
-    public function MainPage() {
+   public function MainPage()
+{
+    if (Auth::check()) {
         return view('Hospital.welcome');
+    } else {
+        return redirect()->route('login')->with('error', 'من فضلك قم بتسجيل الدخول أولاً');
     }
+}
     public function AboutPage() {
         return view('Hospital.about');
     }
@@ -25,6 +32,11 @@ class FirstController extends Controller
     public function OurDoctorsPage() {
         return view('Hospital.Price');
     }
+    public function DoctorsPage(){
+        return view('Hospital.TeamOfDoctors');
+    }
+    
+   
     public function SavePatient(request $request) {
         $request->validate([
         'name' => 'required|string',
