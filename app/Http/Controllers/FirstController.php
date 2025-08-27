@@ -9,13 +9,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\session;
 class FirstController extends Controller
 {
-   public function MainPage()
-{
-    if (Auth::check()) {
+   public function MainPage() {
         return view('Hospital.welcome');
-    } else {
-        return redirect()->route('login')->with('error', 'من فضلك قم بتسجيل الدخول أولاً');
-    }
 }
     public function AboutPage() {
         return view('Hospital.about');
